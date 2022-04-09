@@ -1,10 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request, session, flash
-from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
 import os
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
-import random
 from dotenv import load_dotenv,find_dotenv
 load_dotenv(find_dotenv())
 
@@ -14,15 +11,18 @@ app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']    #use this for Heroku
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
-app.permanent_session_lifetime = timedelta(days=5) 
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
-TokenTimer = 300
 
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
+#app.secret_key = 'super secret key'
+
+
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
+#app.permanent_session_lifetime = timedelta(days=5) 
+#TokenTimer = 300
 db = SQLAlchemy(app)
 
 class Users(db.Model):
@@ -154,9 +154,7 @@ def logout():
 if __name__ == "__main__":
     #db.drop_all()
     db.create_all()
-    app.secret_key = 'super secret key'
-    app.config['SESSION_TYPE'] = 'filesystem'
-    print(getAllUsers())
+    #print(getAllUsers())
     #port = int(os.environ.get('PORT', 7000))
     app.run(debug=True, port = 8080)
     #app.run(debug=True, port = 8000)
