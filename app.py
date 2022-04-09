@@ -13,15 +13,15 @@ load_dotenv(find_dotenv())
 app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']    #use this for Heroku
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']    #use this for Heroku
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
-#app.permanent_session_lifetime = timedelta(days=5) 
-#s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
-#TokenTimer = 300
+app.permanent_session_lifetime = timedelta(days=5) 
+s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+TokenTimer = 300
 
 db = SQLAlchemy(app)
 
