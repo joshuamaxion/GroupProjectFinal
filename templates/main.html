@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block cssOverride %}<link rel="stylesheet" type="text/css" href="../static/css/custom.css">{% endblock %}
+
+
+{% block content %}
+{% if "user" in session %}
+    <p>hellooo</p>
+    
+    <form action="info" method="post">
+        Enter weather location : &nbsp;<input type="text" name="weather" /><br>
+        Enter camping location : &nbsp;<input type="text" name="camping" /><br>
+        Enter Food Recipe : &nbsp;<input type="text" name="recipe" /><br>
+      <input type="submit" value="Submit">
+      </form>
+{% endif %}
+
+{% endblock %}
