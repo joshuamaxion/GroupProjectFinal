@@ -93,7 +93,7 @@ def login():
 @app.route("/info", methods = ["POST","GET"])
 def info():
 
-    return render_template("index.html")
+    return render_template("map.html")
 
 @app.route("/signup", methods=["POST","GET"])
 def signup():
