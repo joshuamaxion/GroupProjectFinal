@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <br/>
+      {% for msg in messages %}
+        <p class="sub-headers">{{msg}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form action="login" method="post">
+    Enter Username : &nbsp;<input type="text" name="username" /><br>
+    Enter Email : &nbsp;<input type="text" name="email" /><br>
+  <input type="submit" value="Log In">
+  </form>
+  <form action="signup" method="get">
+  <input type="submit" value="Sign Up">
+  </form>
+{% endblock %}
