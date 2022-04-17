@@ -12,7 +12,7 @@ class Geopoint(Marker):
         super().__init__(location = [latitude, longitude], popup = popup)
         self.latitude = latitude
         self.longitude = longitude
-        
+
     def closest_parallel(self):
         return round(self.latitude)
     
@@ -24,7 +24,6 @@ class Geopoint(Marker):
     def get_weather(self):
         weather = Weather(apikey = "26631f0f41b95fb9f5ac0df9a8f43c92", lat = self.latitude, lon = self.longitude)
         return weather.next_12h_simplified()
-    
     
     @classmethod
     def random(cls):
