@@ -29,3 +29,5 @@ zipp
 python-dotenv
 timezonefinder
 sunnyday
+folium
+pandas
