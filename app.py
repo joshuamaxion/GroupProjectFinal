@@ -12,8 +12,9 @@ import pandas as pd
 # PROD configs
 app = Flask(__name__)
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']    #use this for Heroku
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku    #use this for Heroku
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']    #use this for Heroku
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 #s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
@@ -206,6 +207,6 @@ if __name__ == "__main__":
     #db.drop_all()
     db.create_all()
     #print(getAllUsers())
-    #port = int(os.environ.get('PORT', 7000))
-    app.run(debug=True, port = 8080)
+    port = int(os.environ.get('PORT', 7000))
+    #app.run(debug=True, port = 8080)
     #app.run(debug=True, port = 8000)
