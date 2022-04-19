@@ -10,7 +10,7 @@ load_dotenv(find_dotenv())
 import os
 
 app = Flask(__name__)
-API_KEY = os.getenv('API_KEY') 
+#API_KEY = os.getenv('API_KEY') 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['API_KEY']
 API_KEY = app.config['SQLALCHEMY_DATABASE_URI']
 

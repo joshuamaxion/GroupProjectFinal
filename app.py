@@ -16,18 +16,18 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']    #use this for Heroku
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-#app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
-#s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
 #API_KEY = os.getenv('API_KEY')     # local test
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
-app.secret_key = 'super secret key'
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
+#app.secret_key = 'super secret key'
 
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
 #app.permanent_session_lifetime = timedelta(days=5) 
-#TokenTimer = 300
+TokenTimer = 300
 db = SQLAlchemy(app)
 
 class Users(db.Model):
