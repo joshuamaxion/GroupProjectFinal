@@ -4,13 +4,11 @@
 
 {% block content %}
 {% if "user" in session %}
-    <p>hellooo</p>
+    <p>Georgia Camping Info</p>
     
     <form action="info" method="post">
-        Enter weather location : &nbsp;<input type="text" name="weather" /><br>
-        Enter camping location : &nbsp;<input type="text" name="camping" /><br>
-        Enter Food Recipe : &nbsp;<input type="text" name="recipe" /><br>
-      <input type="submit" value="Submit">
+
+      <input type="submit" value="Map">
       </form>
 {% endif %}
 
