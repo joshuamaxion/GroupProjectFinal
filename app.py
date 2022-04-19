@@ -96,6 +96,7 @@ def login():
             return render_template("index.html")
 
 @app.route("/info",methods = ['GET','POST'])
+@login_required
 def index():
 
     #Get latitude and longitude values
