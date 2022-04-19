@@ -1,10 +1,16 @@
 from datetime import datetime
+from flask import Flask
 from pytz import timezone
 from timezonefinder import TimezoneFinder
 from sunnyday import Weather
 from random import uniform
 from folium import Marker
+from dotenv import load_dotenv,find_dotenv
+load_dotenv(find_dotenv())
+import os
 
+app = Flask(__name__)
+API_KEY = os.getenv('API_KEY') 
 
 class Geopoint(Marker):
     
@@ -22,7 +28,7 @@ class Geopoint(Marker):
         return time_now
     
     def get_weather(self):
-        weather = Weather(apikey = "26631f0f41b95fb9f5ac0df9a8f43c92", lat = self.latitude, lon = self.longitude)
+        weather = Weather(API_KEY, lat = self.latitude, lon = self.longitude)
         return weather.next_12h_simplified()
     
     
