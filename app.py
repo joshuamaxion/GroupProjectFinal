@@ -14,14 +14,14 @@ app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku    #use this for Heroku
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']    #use this for Heroku
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']    #use this for Heroku
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
-s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+#app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+#s = URLSafeTimedSerializer(app.config['SECRET_KEY'])
 
-#API_KEY = os.getenv('API_KEY')     # local test
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
-#app.secret_key = 'super secret key'
+API_KEY = os.getenv('API_KEY')     # local test
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')     # local test
+app.secret_key = 'super secret key'
 
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DBCONNECTION']
@@ -207,6 +207,6 @@ if __name__ == "__main__":
     #db.drop_all()
     db.create_all()
     #print(getAllUsers())
-    port = int(os.environ.get('PORT', 7000))
-    #app.run(debug=True, port = 8080)
+    #port = int(os.environ.get('PORT', 7000))
+    app.run(debug=True, port = 8080)
     #app.run(debug=True, port = 8000)

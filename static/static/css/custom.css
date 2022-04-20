@@ -52,10 +52,11 @@ img {
     margin: 0 auto; 
     text-align:center;}
 
-.main-header{
+h1.main-header{
     font-family:sans-serif;
     text-align: center;
     font-weight: bold;
+    color: blue;
 }
 
 .for-nick{
