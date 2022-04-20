@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 from dotenv import load_dotenv,find_dotenv
+from sqlalchemy import false
 load_dotenv(find_dotenv())
 from geo import *
 import folium
@@ -44,9 +45,11 @@ def isExistingUser(username, email):
     # used for the user entry check in the db
     existingUser = Users.query.filter_by(username=username).first()
     existingEmail = Users.query.filter_by(email=email).first()
-    if (existingUser or existingEmail):
-        return True
-    return False
+    if not existingUser:
+        return False
+    if not existingEmail:
+        return False
+    return True
 
 def getAllUsers():
     # returns the current users in the table
@@ -97,7 +100,7 @@ def login():
 
 @app.route("/info",methods = ['GET','POST'])
 def index():
-
+    
     #Get latitude and longitude values
     parks = pd.read_csv('GeorgiaStateParks.csv', encoding='unicode_escape')
     locations = [[33.753376, -84.386445, "Welcome!", "(404) 413-2000", "Click on a marker to find a new<br>Georgia park and check its weather!", "Georgia State University"]]

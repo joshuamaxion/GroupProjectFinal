@@ -11,7 +11,7 @@ import os
 
 app = Flask(__name__)
 #API_KEY = os.getenv('API_KEY') 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['API_KEY']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['API_KEY']  #heroku
 API_KEY = app.config['SQLALCHEMY_DATABASE_URI']
 
 class Geopoint(Marker):
