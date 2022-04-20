@@ -47,8 +47,11 @@
               <div class="pt-1 mb-4">
                 <button class="btn btn-primary" type="submit" id="sendlogin">Login</button>
               </div>
-  
-              <p>Don't have an account? <a href="/templates/signup.html" class="link-info">Register here</a></p>
+            </form>
+            <form action="signup" method="get">
+            <input type="submit" value="Sign Up">
+            </form>
+              <p>Don't have an account? <a href={{ url_for('/signup')}} class="link-info">Register here</a></p>
   
             </form>
   
