@@ -8,10 +8,11 @@ load_dotenv(find_dotenv())
 from geo import *
 import folium
 import pandas as pd
-
+from nps import *
 
 # PROD configs
 app = Flask(__name__)
+
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['HEROKU_POSTGRESQL_GOLD_URL']    #use this for Heroku    #use this for Heroku
 
@@ -72,6 +73,15 @@ def addUser(username, email):
 def home():
     # main landing page; renders the main page if logged in, login page otherwise.
     return render_template("index.html")
+
+@app.route("/parking", methods = ['POST'])
+def parking():
+    state_ids = ["GA","FL","TN"]
+    state_id = random.choice(state_ids)
+    name, link, state, desc, directions, hours ,coord = get_park_data(state_id)
+
+    return render_template("main.html", name = name, link = link,state = state , desc = desc, directions = directions,
+    hours = hours, coord = coord)
 
 @app.route('/login', methods = ['GET','POST'])
 def login():

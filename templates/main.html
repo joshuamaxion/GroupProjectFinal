@@ -9,6 +9,22 @@
     <form action="info" method="post">
       <input type="submit" value="Map">
     </form>
+    <div class = "park">
+      <ul>
+
+        <form action="parking" method="post">
+          <input type="submit" value="refresh">
+        </form>
+      </ul>
+    </div>
+    <div class = "information">
+      <ul>{{name}}</ul>
+      <ul>{{hours}}</ul>
+      <ul>{{coord}}</ul>
+      <ul>{{state}}</ul>
+    </div>
+    <a href = "{{directions}}">Click here to see {{state}} national park website!</a>
+
 {% endif %}
 
 {% endblock %}
