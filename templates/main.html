@@ -4,14 +4,27 @@
 
 {% block content %}
 {% if "user" in session %}
-    <p>hellooo</p>
+    <p>Georgia CampingInfo</p>
     
     <form action="info" method="post">
-        Enter weather location : &nbsp;<input type="text" name="weather" /><br>
-        Enter camping location : &nbsp;<input type="text" name="camping" /><br>
-        Enter Food Recipe : &nbsp;<input type="text" name="recipe" /><br>
-      <input type="submit" value="Submit">
-      </form>
+      <input type="submit" value="Map">
+    </form>
+    <div class = "park">
+      <ul>
+
+        <form action="parking" method="post">
+          <input type="submit" value="refresh">
+        </form>
+      </ul>
+    </div>
+    <div class = "information">
+      <ul>{{name}}</ul>
+      <ul>{{hours}}</ul>
+      <ul>{{coord}}</ul>
+      <ul>{{state}}</ul>
+    </div>
+    <a href = "{{directions}}">Click here to see {{state}} national park website!</a>
+
 {% endif %}
 
 {% endblock %}

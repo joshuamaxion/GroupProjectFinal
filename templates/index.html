@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Signup Page{% endblock %}
+{% block title %}Index page{% endblock %}
 
 {% block content %}
   {% with messages = get_flashed_messages() %}
@@ -11,6 +11,15 @@
     {% endif %}
   {% endwith %}
 
+  {% if "temporary" in session %}
+    <p class="center-content">Click the button below to start over.</p>
+    
+    <div class="center-content"> 
+      <form action="logout" method="post">
+        <input type="submit" value="Start over">
+      </form>
+  </div>
+  {% elif "user" not in session%}
   <section class="vh-100">
     <div class="container-fluid">
       <div class="row">
@@ -22,9 +31,9 @@
   
   
   
-              <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create Account</h1>
+              <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h1>
               <br/>
-              <form action="signup" method="post">
+              <form action="login" method="post">
 
               <div class="form-outline mb-4">
                 <input type="text" id="form2Example18" class="form-control form-control-lg" name="username" />
@@ -36,10 +45,13 @@
                 <label class="form-label" for="form2Example28">Email</label>
               </div>
               
-              <button type="submit" id="sendlogin" class="btn btn-primary">Sign Up</button>
+              <button type="submit" id="sendlogin" class="btn btn-primary">Login</button>
 
             </form>
-            
+            <br/>
+            <p> Don't have an account? </p>
+            <form action="signup" method="get">
+              <button type="submit" id="sendlogin" class="btn btn-primary">Sign Up</button></p>
   
             </form>
             </form>
@@ -53,4 +65,12 @@
       </div>
     </div>
   </section>
+  
+{% elif "user" in session %}
+  <p>You are currently logged in as {{ session["user"] }}</p>
+  <form action="logout" method="get">
+    <input type="submit" value="Log Out"> 
+  </form>
+{% endif %}
+
 {% endblock %}

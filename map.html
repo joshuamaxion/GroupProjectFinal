@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_25104a2556d1d604b047a5cdd9ba743f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_25104a2556d1d604b047a5cdd9ba743f" ></div>
+        
+</body>
+<script>    
+    
+            var map_25104a2556d1d604b047a5cdd9ba743f = L.map(
+                "map_25104a2556d1d604b047a5cdd9ba743f",
+                {
+                    center: [33.753376, -84.386445],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_93c04db885ac359124bea0fcc0053bca = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+            var marker_87e8405d001868903aaf026a8c5ff18a = L.marker(
+                [33.753376, -84.386445],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_abbb0910ad57e96f050fca10558029a8 = L.popup({"maxWidth": 400});
+
+        
+            var html_5571a1c007e3d44720f11cb24e5a875b = $(`<div id="html_5571a1c007e3d44720f11cb24e5a875b" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";>Welcome!</h4>         <h6 style="text-align: center";>Click on a marker to find a new<br>Georgia park and check its weather!</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 59°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(404) 413-2000</p>         <a href="https://www.google.com/search?q=Georgia+State+University" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_abbb0910ad57e96f050fca10558029a8.setContent(html_5571a1c007e3d44720f11cb24e5a875b);
+        
+
+        marker_87e8405d001868903aaf026a8c5ff18a.bindPopup(popup_abbb0910ad57e96f050fca10558029a8)
+        ;
+
+        
+    
+    
+            var marker_38a6a2b432e89802d85ade7f1fef1e33 = L.marker(
+                [33.5682, -82.8965],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_d62910e7318e682dfed0e9e6145eb999 = L.popup({"maxWidth": 400});
+
+        
+            var html_a036af2610e3a1c8124f7959095962c8 = $(`<div id="html_a036af2610e3a1c8124f7959095962c8" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Alexander H Stephens Memorial State Park </h4>         <h6 style="text-align: center";>456 Alexander St., Crawfordville, GA 30631</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 58°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 456-2602</p>         <a href="https://www.google.com/search?q=+Alexander+H+Stephens+Memorial+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_d62910e7318e682dfed0e9e6145eb999.setContent(html_a036af2610e3a1c8124f7959095962c8);
+        
+
+        marker_38a6a2b432e89802d85ade7f1fef1e33.bindPopup(popup_d62910e7318e682dfed0e9e6145eb999)
+        ;
+
+        
+    
+    
+            var marker_223f1656d3a66132cf9675d44d6c3fca = L.marker(
+                [34.5606, -84.248],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_637a032d8a8a6f1eb677e1ae52a5f45e = L.popup({"maxWidth": 400});
+
+        
+            var html_8e8722e79af8ad008691a72496a4a1cb = $(`<div id="html_8e8722e79af8ad008691a72496a4a1cb" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Amicalola Falls State Park </h4>         <h6 style="text-align: center";>240 Amicalola Falls State Park Rd, Dawsonville, GA 30534</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 54°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 53°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 55°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 265-4703</p>         <a href="https://www.google.com/search?q=+Amicalola+Falls+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_637a032d8a8a6f1eb677e1ae52a5f45e.setContent(html_8e8722e79af8ad008691a72496a4a1cb);
+        
+
+        marker_223f1656d3a66132cf9675d44d6c3fca.bindPopup(popup_637a032d8a8a6f1eb677e1ae52a5f45e)
+        ;
+
+        
+    
+    
+            var marker_d413514d5c13d68c21abbb109d43b300 = L.marker(
+                [34.9095, -83.4152],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_9c045c2c1cdaa6f08fe80ee76d3b2fe2 = L.popup({"maxWidth": 400});
+
+        
+            var html_b034719d67e6481659ca39b3b932ddcc = $(`<div id="html_b034719d67e6481659ca39b3b932ddcc" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Black Rock Mountain State Park </h4>         <h6 style="text-align: center";>P.O. Drawer A, Mountain City, GA 30562</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 49°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 48°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 50°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 67°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 746-2141</p>         <a href="https://www.google.com/search?q=+Black+Rock+Mountain+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_9c045c2c1cdaa6f08fe80ee76d3b2fe2.setContent(html_b034719d67e6481659ca39b3b932ddcc);
+        
+
+        marker_d413514d5c13d68c21abbb109d43b300.bindPopup(popup_9c045c2c1cdaa6f08fe80ee76d3b2fe2)
+        ;
+
+        
+    
+    
+            var marker_86318f5432d917a29b44a9d63b2e59b7 = L.marker(
+                [33.9785, -82.5882],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_d4f4bd411de26388f70999f1e92dfbda = L.popup({"maxWidth": 400});
+
+        
+            var html_21376a3843978a60128befc560fc9cad = $(`<div id="html_21376a3843978a60128befc560fc9cad" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Bobby Brown State Park </h4>         <h6 style="text-align: center";>2509 Bobby Brown State Park Rd., Elberton, GA 30635</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 56°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 74°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 213-2046</p>         <a href="https://www.google.com/search?q=+Bobby+Brown+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_d4f4bd411de26388f70999f1e92dfbda.setContent(html_21376a3843978a60128befc560fc9cad);
+        
+
+        marker_86318f5432d917a29b44a9d63b2e59b7.bindPopup(popup_d4f4bd411de26388f70999f1e92dfbda)
+        ;
+
+        
+    
+    
+            var marker_5a5f0e34cbacd70adadc0be8cf7c4dbe = L.marker(
+                [34.8423, -85.4825],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_775cb3cd020f579b8b34271659f621bc = L.popup({"maxWidth": 400});
+
+        
+            var html_ea5935b9d651a0de97f7cd84b57d20ba = $(`<div id="html_ea5935b9d651a0de97f7cd84b57d20ba" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Cloudland Canyon State Park </h4>         <h6 style="text-align: center";>122 Cloudland Canyon State Park Rd., Rising Fawn, GA 30738</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 657-4050</p>         <a href="https://www.google.com/search?q=+Cloudland+Canyon+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_775cb3cd020f579b8b34271659f621bc.setContent(html_ea5935b9d651a0de97f7cd84b57d20ba);
+        
+
+        marker_5a5f0e34cbacd70adadc0be8cf7c4dbe.bindPopup(popup_775cb3cd020f579b8b34271659f621bc)
+        ;
+
+        
+    
+    
+            var marker_9ebc120def8cb5b3e730d280bd419c6e = L.marker(
+                [30.8416, -81.5501],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_d1f432757b902176df0ecaef88d9d315 = L.popup({"maxWidth": 400});
+
+        
+            var html_5b4209c90b884cbabf0cd79cf3da13d4 = $(`<div id="html_5b4209c90b884cbabf0cd79cf3da13d4" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Crooked River State Park </h4>         <h6 style="text-align: center";>6222 Charlie Smith Sr. Hwy, St. Marys, GA 31558</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 68°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 67°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 67°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 882-5256</p>         <a href="https://www.google.com/search?q=+Crooked+River+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_d1f432757b902176df0ecaef88d9d315.setContent(html_5b4209c90b884cbabf0cd79cf3da13d4);
+        
+
+        marker_9ebc120def8cb5b3e730d280bd419c6e.bindPopup(popup_d1f432757b902176df0ecaef88d9d315)
+        ;
+
+        
+    
+    
+            var marker_e16af336c38ea9e178dca4990ebee2ad = L.marker(
+                [33.854, -82.4035],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_0ca7c87cbf82627e6a169ab20e63e63f = L.popup({"maxWidth": 400});
+
+        
+            var html_c38590b625859a3f8ffcd3ad697139a1 = $(`<div id="html_c38590b625859a3f8ffcd3ad697139a1" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Elijah Clark State Park </h4>         <h6 style="text-align: center";>2959 McCormick Hwy, Lincolnton, GA 30817</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 359-3458</p>         <a href="https://www.google.com/search?q=+Elijah+Clark+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_0ca7c87cbf82627e6a169ab20e63e63f.setContent(html_c38590b625859a3f8ffcd3ad697139a1);
+        
+
+        marker_e16af336c38ea9e178dca4990ebee2ad.bindPopup(popup_0ca7c87cbf82627e6a169ab20e63e63f)
+        ;
+
+        
+    
+    
+            var marker_24cce971e53772cf78b7968a93d36e93 = L.marker(
+                [32.091, -85.0433],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_7fa6837a060aaf4a1466457e4dc09faa = L.popup({"maxWidth": 400});
+
+        
+            var html_da99a7495f03736f499829e422598028 = $(`<div id="html_da99a7495f03736f499829e422598028" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Florence Marina State Park </h4>         <h6 style="text-align: center";>Route 1, Box 36, Omaha, GA 31821</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 838-4244</p>         <a href="https://www.google.com/search?q=+Florence+Marina+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_7fa6837a060aaf4a1466457e4dc09faa.setContent(html_da99a7495f03736f499829e422598028);
+        
+
+        marker_24cce971e53772cf78b7968a93d36e93.bindPopup(popup_7fa6837a060aaf4a1466457e4dc09faa)
+        ;
+
+        
+    
+    
+            var marker_c1e5d76798e1483e8adcdeba85ec9d8c = L.marker(
+                [31.3649, -81.4145],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_3152c09b51ea6e676d361c6a48fb70b8 = L.popup({"maxWidth": 400});
+
+        
+            var html_0f574a3ffda0915fa8b79f65368dfcea = $(`<div id="html_0f574a3ffda0915fa8b79f65368dfcea" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Fort King George State Historic Site </h4>         <h6 style="text-align: center";>1600 Wayne St, Darien , GA 31305</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 64°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 437-4770</p>         <a href="https://www.google.com/search?q=+Fort+King+George+State+Historic+Site+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_3152c09b51ea6e676d361c6a48fb70b8.setContent(html_0f574a3ffda0915fa8b79f65368dfcea);
+        
+
+        marker_c1e5d76798e1483e8adcdeba85ec9d8c.bindPopup(popup_3152c09b51ea6e676d361c6a48fb70b8)
+        ;
+
+        
+    
+    
+            var marker_a8c1d533832e29f0e42f9224f41f9c6a = L.marker(
+                [31.7644, -81.2809],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_4aba068759f37a7ab540dbfca688c62d = L.popup({"maxWidth": 400});
+
+        
+            var html_545ccf1b49167fb64d00f05651acd037 = $(`<div id="html_545ccf1b49167fb64d00f05651acd037" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Fort Morris State Historic Site </h4>         <h6 style="text-align: center";>2559 Fort Morris Road, Midway , GA 31320</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 62°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 884-5999</p>         <a href="https://www.google.com/search?q=+Fort+Morris+State+Historic+Site+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_4aba068759f37a7ab540dbfca688c62d.setContent(html_545ccf1b49167fb64d00f05651acd037);
+        
+
+        marker_a8c1d533832e29f0e42f9224f41f9c6a.bindPopup(popup_4aba068759f37a7ab540dbfca688c62d)
+        ;
+
+        
+    
+    
+            var marker_f6b22385f3e72054c21cdd895aa0a05d = L.marker(
+                [34.7612, -84.6997],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_e00b1ac74260cc1fd162ae42c1fc6edb = L.popup({"maxWidth": 400});
+
+        
+            var html_610c2cd2113cd97511f9cf3ffb4ac1ad = $(`<div id="html_610c2cd2113cd97511f9cf3ffb4ac1ad" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Fort Mountain State Park </h4>         <h6 style="text-align: center";>181 Fort Mountain Park Road, Chatsworth, GA 30705</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 52°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 52°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 53°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 66°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 695-2621</p>         <a href="https://www.google.com/search?q=+Fort+Mountain+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_e00b1ac74260cc1fd162ae42c1fc6edb.setContent(html_610c2cd2113cd97511f9cf3ffb4ac1ad);
+        
+
+        marker_f6b22385f3e72054c21cdd895aa0a05d.bindPopup(popup_e00b1ac74260cc1fd162ae42c1fc6edb)
+        ;
+
+        
+    
+    
+            var marker_ba510547b79e612bd4602d737b01b304 = L.marker(
+                [33.9718, -83.7274],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_4c58987e20284206e44283aaf985b3ae = L.popup({"maxWidth": 400});
+
+        
+            var html_af9b8e0a407f2110bade7e9d05d9a8d8 = $(`<div id="html_af9b8e0a407f2110bade7e9d05d9a8d8" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Fort Yargo State Park </h4>         <h6 style="text-align: center";>P. O. Box 764, Winder, GA 30680</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 56°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 55°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 56°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 867-3489</p>         <a href="https://www.google.com/search?q=+Fort+Yargo+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_4c58987e20284206e44283aaf985b3ae.setContent(html_af9b8e0a407f2110bade7e9d05d9a8d8);
+        
+
+        marker_ba510547b79e612bd4602d737b01b304.bindPopup(popup_4c58987e20284206e44283aaf985b3ae)
+        ;
+
+        
+    
+    
+            var marker_b27b0650f7f2b249fbaca6fb55cbe2be = L.marker(
+                [32.8493, -84.7999],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_249ba630ad06c9c327dc67e98513745a = L.popup({"maxWidth": 400});
+
+        
+            var html_444f6ccf7ae7d028c641c0a72529e1b5 = $(`<div id="html_444f6ccf7ae7d028c641c0a72529e1b5" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Franklin D Roosevelt State Park </h4>         <h6 style="text-align: center";>2970 Ga. Hwy. 190, Pine Mountain, GA 31822</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 70°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 663-4858</p>         <a href="https://www.google.com/search?q=+Franklin+D+Roosevelt+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_249ba630ad06c9c327dc67e98513745a.setContent(html_444f6ccf7ae7d028c641c0a72529e1b5);
+        
+
+        marker_b27b0650f7f2b249fbaca6fb55cbe2be.bindPopup(popup_249ba630ad06c9c327dc67e98513745a)
+        ;
+
+        
+    
+    
+            var marker_7be48febecbbf84c9cb75c46bc1de13d = L.marker(
+                [31.5266, -82.761],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_9c6a67ebc6374c6a607b2ea94a25e4d2 = L.popup({"maxWidth": 400});
+
+        
+            var html_8ebef531d8b7a4ca2026c0025bcae398 = $(`<div id="html_8ebef531d8b7a4ca2026c0025bcae398" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> General Coffee State Park </h4>         <h6 style="text-align: center";>46 John Coffee Road, Nicholls, GA 31554</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 63°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 61°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 61°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 384-7082</p>         <a href="https://www.google.com/search?q=+General+Coffee+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_9c6a67ebc6374c6a607b2ea94a25e4d2.setContent(html_8ebef531d8b7a4ca2026c0025bcae398);
+        
+
+        marker_7be48febecbbf84c9cb75c46bc1de13d.bindPopup(popup_9c6a67ebc6374c6a607b2ea94a25e4d2)
+        ;
+
+        
+    
+    
+            var marker_1a44af01e0b5bac47df1a82bb3218741 = L.marker(
+                [32.5621, -82.1107],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_95a04abf5dc175ef492d55dd310f9f88 = L.popup({"maxWidth": 400});
+
+        
+            var html_5dbeeb68cabddd2e7282af29d44e4f55 = $(`<div id="html_5dbeeb68cabddd2e7282af29d44e4f55" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> George L Smith II State Park </h4>         <h6 style="text-align: center";>371 George L. Smith State Park Rd., Twin City, GA 30471</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(478) 763-2759</p>         <a href="https://www.google.com/search?q=+George+L+Smith+II+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_95a04abf5dc175ef492d55dd310f9f88.setContent(html_5dbeeb68cabddd2e7282af29d44e4f55);
+        
+
+        marker_1a44af01e0b5bac47df1a82bb3218741.bindPopup(popup_95a04abf5dc175ef492d55dd310f9f88)
+        ;
+
+        
+    
+    
+            var marker_bc1fbc49b11cf8c4fe3d91ab205f95b5 = L.marker(
+                [31.7382, -85.0694],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_aecbd8ec1ef1fc2a3d9e283135c14568 = L.popup({"maxWidth": 400});
+
+        
+            var html_99de2dfca131e55f3673b2bcbbd88a7c = $(`<div id="html_99de2dfca131e55f3673b2bcbbd88a7c" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> George T Bagby State Park </h4>         <h6 style="text-align: center";>Rt. 1, Box 201, Ft. Gaines, GA 39851</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 768-2571</p>         <a href="https://www.google.com/search?q=+George+T+Bagby+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_aecbd8ec1ef1fc2a3d9e283135c14568.setContent(html_99de2dfca131e55f3673b2bcbbd88a7c);
+        
+
+        marker_bc1fbc49b11cf8c4fe3d91ab205f95b5.bindPopup(popup_aecbd8ec1ef1fc2a3d9e283135c14568)
+        ;
+
+        
+    
+    
+            var marker_fba3399673685c78065b478d5d83b55b = L.marker(
+                [31.958, -83.9038],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_8a2e9f5d9b33cc1864e095dea88c83a6 = L.popup({"maxWidth": 400});
+
+        
+            var html_dafe6efd1fba015e814acd7d8a73112c = $(`<div id="html_dafe6efd1fba015e814acd7d8a73112c" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Georgia Veterans Memorial State Park </h4>         <h6 style="text-align: center";>2459-A U.S. Hwy. 280 W., Cordele, GA 31015</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 276-2371</p>         <a href="https://www.google.com/search?q=+Georgia+Veterans+Memorial+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_8a2e9f5d9b33cc1864e095dea88c83a6.setContent(html_dafe6efd1fba015e814acd7d8a73112c);
+        
+
+        marker_fba3399673685c78065b478d5d83b55b.bindPopup(popup_8a2e9f5d9b33cc1864e095dea88c83a6)
+        ;
+
+        
+    
+    
+            var marker_db38a32a1b8adb901ae8e9f54b19c095 = L.marker(
+                [32.0863, -82.1326],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_733cf9ce01839afa41bd80c216ffab8c = L.popup({"maxWidth": 400});
+
+        
+            var html_8c8a43f65210ac163d0cd78c5d155005 = $(`<div id="html_8c8a43f65210ac163d0cd78c5d155005" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Gordonia Alatamaha State Park </h4>         <h6 style="text-align: center";>P. O. Box 1039, Reidsville, GA 30453</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 557-7744</p>         <a href="https://www.google.com/search?q=+Gordonia+Alatamaha+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_733cf9ce01839afa41bd80c216ffab8c.setContent(html_8c8a43f65210ac163d0cd78c5d155005);
+        
+
+        marker_db38a32a1b8adb901ae8e9f54b19c095.bindPopup(popup_733cf9ce01839afa41bd80c216ffab8c)
+        ;
+
+        
+    
+    
+            var marker_0ac0463f1be2deb4ff7d78250609a073 = L.marker(
+                [33.2051, -82.7771],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_fd731f6ae16df2905e5a5e3bdb44ce6e = L.popup({"maxWidth": 400});
+
+        
+            var html_7fc7923832eba88b4cda5bbdcd406743 = $(`<div id="html_7fc7923832eba88b4cda5bbdcd406743" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Hamburg State Park</h4>         <h6 style="text-align: center";>6071 Hamburg State Park Rd., Mitchell, GA 30820</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(478) 552-2393</p>         <a href="https://www.google.com/search?q=+Hamburg+State+Park" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_fd731f6ae16df2905e5a5e3bdb44ce6e.setContent(html_7fc7923832eba88b4cda5bbdcd406743);
+        
+
+        marker_0ac0463f1be2deb4ff7d78250609a073.bindPopup(popup_fd731f6ae16df2905e5a5e3bdb44ce6e)
+        ;
+
+        
+    
+    
+            var marker_e1fbe4772fc75a481e0f4659c0ab14fb = L.marker(
+                [33.6532, -83.6035],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_6b7c8f123201ebafae0645b08e38a2cb = L.popup({"maxWidth": 400});
+
+        
+            var html_8c80b294b8bd7f7d0b6b1a894bd23fc0 = $(`<div id="html_8c80b294b8bd7f7d0b6b1a894bd23fc0" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Hard Labor Creek State Park </h4>         <h6 style="text-align: center";>P. O. Box 247, Rutledge, GA 30663</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 557-3001</p>         <a href="https://www.google.com/search?q=+Hard+Labor+Creek+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_6b7c8f123201ebafae0645b08e38a2cb.setContent(html_8c80b294b8bd7f7d0b6b1a894bd23fc0);
+        
+
+        marker_e1fbe4772fc75a481e0f4659c0ab14fb.bindPopup(popup_6b7c8f123201ebafae0645b08e38a2cb)
+        ;
+
+        
+    
+    
+            var marker_30ba8d993cb9c3be8990ec3e29e46bbd = L.marker(
+                [34.3779, -82.9124],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_0ef5eca527bc92a8a9b0cf502c483a66 = L.popup({"maxWidth": 400});
+
+        
+            var html_8eb6d453094e6db535dedc3e1b2e445d = $(`<div id="html_8eb6d453094e6db535dedc3e1b2e445d" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Hart State Park </h4>         <h6 style="text-align: center";>330 Hart State Park Road, Hartwell, GA 30643</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 56°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 376-8756</p>         <a href="https://www.google.com/search?q=+Hart+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_0ef5eca527bc92a8a9b0cf502c483a66.setContent(html_8eb6d453094e6db535dedc3e1b2e445d);
+        
+
+        marker_30ba8d993cb9c3be8990ec3e29e46bbd.bindPopup(popup_0ef5eca527bc92a8a9b0cf502c483a66)
+        ;
+
+        
+    
+    
+            var marker_f7fdeee45f57f0c8dda015b5e8710d1a = L.marker(
+                [33.1812, -84.016],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_01823c8c48e2f10115c124bd1ffa3ef6 = L.popup({"maxWidth": 400});
+
+        
+            var html_a0f59429f3cd945b47ba9c16f89d9f48 = $(`<div id="html_a0f59429f3cd945b47ba9c16f89d9f48" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> High Falls State Park </h4>         <h6 style="text-align: center";>76 High Falls Park Drive, Jackson, GA 30233</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 56°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(478) 993-3053</p>         <a href="https://www.google.com/search?q=+High+Falls+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_01823c8c48e2f10115c124bd1ffa3ef6.setContent(html_a0f59429f3cd945b47ba9c16f89d9f48);
+        
+
+        marker_f7fdeee45f57f0c8dda015b5e8710d1a.bindPopup(popup_01823c8c48e2f10115c124bd1ffa3ef6)
+        ;
+
+        
+    
+    
+            var marker_b553385294b2dcf52de8dd3b065f6087 = L.marker(
+                [33.244, -83.931],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_26db2798d625aec42cdedb408ce921c3 = L.popup({"maxWidth": 400});
+
+        
+            var html_9db94c61cf13e02c1a6c26197cf8eb53 = $(`<div id="html_9db94c61cf13e02c1a6c26197cf8eb53" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Indian Springs State Park </h4>         <h6 style="text-align: center";>678 Lake Clark Road, Flovilla, GA 30216</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 504-2277</p>         <a href="https://www.google.com/search?q=+Indian+Springs+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_26db2798d625aec42cdedb408ce921c3.setContent(html_9db94c61cf13e02c1a6c26197cf8eb53);
+        
+
+        marker_b553385294b2dcf52de8dd3b065f6087.bindPopup(popup_26db2798d625aec42cdedb408ce921c3)
+        ;
+
+        
+    
+    
+            var marker_f9857ce698899bc7bbb5f4211603e1a1 = L.marker(
+                [34.4404, -85.3416],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_05089708c589db446feca8d42b312dc3 = L.popup({"maxWidth": 400});
+
+        
+            var html_f0300ba8c0ae801b38a9169cfdbab59d = $(`<div id="html_f0300ba8c0ae801b38a9169cfdbab59d" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> James H 'Sloppy' Floyd State Park </h4>         <h6 style="text-align: center";>2800 "Sloppy" Floyd Lake Rd., Summerville, GA 30747</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 857-0826</p>         <a href="https://www.google.com/search?q=+James+H+'Sloppy'+Floyd+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_05089708c589db446feca8d42b312dc3.setContent(html_f0300ba8c0ae801b38a9169cfdbab59d);
+        
+
+        marker_f9857ce698899bc7bbb5f4211603e1a1.bindPopup(popup_05089708c589db446feca8d42b312dc3)
+        ;
+
+        
+    
+    
+            var marker_34bd481ed324f16382a5e6d7fff37df7 = L.marker(
+                [33.0526, -83.7249],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_b5a9508a1c6ff6eac45e6dbfa5b24ced = L.popup({"maxWidth": 400});
+
+        
+            var html_bc66c6fcccf9542d8b4378e89e4e00ee = $(`<div id="html_bc66c6fcccf9542d8b4378e89e4e00ee" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Jarrell Plantation State Historic Site </h4>         <h6 style="text-align: center";>711 Jarrell Plantation Rd., Juliette , GA 31046</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 58°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(478) 986-5172</p>         <a href="https://www.google.com/search?q=+Jarrell+Plantation+State+Historic+Site+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_b5a9508a1c6ff6eac45e6dbfa5b24ced.setContent(html_bc66c6fcccf9542d8b4378e89e4e00ee);
+        
+
+        marker_34bd481ed324f16382a5e6d7fff37df7.bindPopup(popup_b5a9508a1c6ff6eac45e6dbfa5b24ced)
+        ;
+
+        
+    
+    
+            var marker_ab4604e26e569b9cc168e872c1a31854 = L.marker(
+                [31.6644, -83.3865],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_42b1c4d30033210616c1442631018824 = L.popup({"maxWidth": 400});
+
+        
+            var html_34bd10f621d66e314d7cfc2e19e3aa09 = $(`<div id="html_34bd10f621d66e314d7cfc2e19e3aa09" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Jefferson Davis Memorial State Park </h4>         <h6 style="text-align: center";>338 Jeff Davis Park Rd, Fitzgerald , GA 31750 (229) 831-2335</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 831-2335</p>         <a href="https://www.google.com/search?q=+Jefferson+Davis+Memorial+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_42b1c4d30033210616c1442631018824.setContent(html_34bd10f621d66e314d7cfc2e19e3aa09);
+        
+
+        marker_ab4604e26e569b9cc168e872c1a31854.bindPopup(popup_42b1c4d30033210616c1442631018824)
+        ;
+
+        
+    
+    
+            var marker_f6be30713dcb5de4cfde4efbd4747d5b = L.marker(
+                [33.5968, -85.1683],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_6e774aef311cb9de51bf94a291c885b6 = L.popup({"maxWidth": 400});
+
+        
+            var html_d6d2c2aa844486a5d9c916d9ee5fb438 = $(`<div id="html_d6d2c2aa844486a5d9c916d9ee5fb438" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> John Tanner State Park  </h4>         <h6 style="text-align: center";>354 Tannerï¿½s Beach Rd., Carrollton, GA 30117</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 830-2222</p>         <a href="https://www.google.com/search?q=+John+Tanner+State+Park++" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_6e774aef311cb9de51bf94a291c885b6.setContent(html_d6d2c2aa844486a5d9c916d9ee5fb438);
+        
+
+        marker_f6be30713dcb5de4cfde4efbd4747d5b.bindPopup(popup_6e774aef311cb9de51bf94a291c885b6)
+        ;
+
+        
+    
+    
+            var marker_86c7b7187b5dbd8d1e42644c2eb4d107 = L.marker(
+                [31.4716, -84.9255],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_4e1bb1bb6a0c2a84e4a4790695226288 = L.popup({"maxWidth": 400});
+
+        
+            var html_005b33b8348c1406cda8fea4c2c99c3a = $(`<div id="html_005b33b8348c1406cda8fea4c2c99c3a" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Kolomoki Mounds State Park </h4>         <h6 style="text-align: center";>205 Indian Mounds Rd., Blakely, GA 31723</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 724-2150</p>         <a href="https://www.google.com/search?q=+Kolomoki+Mounds+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_4e1bb1bb6a0c2a84e4a4790695226288.setContent(html_005b33b8348c1406cda8fea4c2c99c3a);
+        
+
+        marker_86c7b7187b5dbd8d1e42644c2eb4d107.bindPopup(popup_4e1bb1bb6a0c2a84e4a4790695226288)
+        ;
+
+        
+    
+    
+            var marker_11b9849509b8a6537089158e0a227046 = L.marker(
+                [31.1433, -82.2165],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_844f1548dadc98a504a8b2a7aa57d13d = L.popup({"maxWidth": 400});
+
+        
+            var html_00c16b6166f5c5654d8539c4c4ed231f = $(`<div id="html_00c16b6166f5c5654d8539c4c4ed231f" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Laura S Walker State Park </h4>         <h6 style="text-align: center";>5653 Laura Walker Rd., Waycross, GA - 31501</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 75°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 287-4900</p>         <a href="https://www.google.com/search?q=+Laura+S+Walker+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_844f1548dadc98a504a8b2a7aa57d13d.setContent(html_00c16b6166f5c5654d8539c4c4ed231f);
+        
+
+        marker_11b9849509b8a6537089158e0a227046.bindPopup(popup_844f1548dadc98a504a8b2a7aa57d13d)
+        ;
+
+        
+    
+    
+            var marker_c49b1856264dde0cb409381b4c9b848f = L.marker(
+                [32.0985, -82.8985],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_4003302341b653695dd80ec68a96ffdb = L.popup({"maxWidth": 400});
+
+        
+            var html_7e95b4c2b0f96f8604f14fe72c1b820c = $(`<div id="html_7e95b4c2b0f96f8604f14fe72c1b820c" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Little Ocmulgee State Park </h4>         <h6 style="text-align: center";>P.O. Drawer 149, McRae, GA 31055</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 60°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 868-7474</p>         <a href="https://www.google.com/search?q=+Little+Ocmulgee+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_4003302341b653695dd80ec68a96ffdb.setContent(html_7e95b4c2b0f96f8604f14fe72c1b820c);
+        
+
+        marker_c49b1856264dde0cb409381b4c9b848f.bindPopup(popup_4003302341b653695dd80ec68a96ffdb)
+        ;
+
+        
+    
+    
+            var marker_47f7d189840cb2abe680d3beeb8aaf75 = L.marker(
+                [32.864, -84.7166],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_ddb52a5507f67f80953a6aa185f5a529 = L.popup({"maxWidth": 400});
+
+        
+            var html_f3f7a10f81ce4085fead635c7dd6ea1f = $(`<div id="html_f3f7a10f81ce4085fead635c7dd6ea1f" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Little White House State Historic Site </h4>         <h6 style="text-align: center";>401 Little White House Rd, Warm Springs , GA 31830</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 70°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 655-5870</p>         <a href="https://www.google.com/search?q=+Little+White+House+State+Historic+Site+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_ddb52a5507f67f80953a6aa185f5a529.setContent(html_f3f7a10f81ce4085fead635c7dd6ea1f);
+        
+
+        marker_47f7d189840cb2abe680d3beeb8aaf75.bindPopup(popup_ddb52a5507f67f80953a6aa185f5a529)
+        ;
+
+        
+    
+    
+            var marker_fa06aed4b40ba839763b4ffc4aa6acd8 = L.marker(
+                [32.8868, -81.9557],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_6d71f6b6d209ac61d98e2fbc903b8c29 = L.popup({"maxWidth": 400});
+
+        
+            var html_0e71f63951cc51f10391cb70d9719ac7 = $(`<div id="html_0e71f63951cc51f10391cb70d9719ac7" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Magnolia Springs State Park </h4>         <h6 style="text-align: center";>1053 Magnolia Springs Dr., Millen, GA 30442</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 58°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 59°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(478) 982-1660</p>         <a href="https://www.google.com/search?q=+Magnolia+Springs+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_6d71f6b6d209ac61d98e2fbc903b8c29.setContent(html_0e71f63951cc51f10391cb70d9719ac7);
+        
+
+        marker_fa06aed4b40ba839763b4ffc4aa6acd8.bindPopup(popup_6d71f6b6d209ac61d98e2fbc903b8c29)
+        ;
+
+        
+    
+    
+            var marker_aa7a1932cb43adcb98246283dc641b36 = L.marker(
+                [33.6418, -82.3682],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_bfe7b4078d56445c570e5f20ee8b32d8 = L.popup({"maxWidth": 400});
+
+        
+            var html_8ecfa5f56414a67120c3f19ba3779568 = $(`<div id="html_8ecfa5f56414a67120c3f19ba3779568" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Mistletoe State Park </h4>         <h6 style="text-align: center";>3723 Mistletoe Rd., Appling, GA 30802</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 59°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 541-0321</p>         <a href="https://www.google.com/search?q=+Mistletoe+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_bfe7b4078d56445c570e5f20ee8b32d8.setContent(html_8ecfa5f56414a67120c3f19ba3779568);
+        
+
+        marker_aa7a1932cb43adcb98246283dc641b36.bindPopup(popup_bfe7b4078d56445c570e5f20ee8b32d8)
+        ;
+
+        
+    
+    
+            var marker_31ce9b00aab5d968c32d4db4dee42e1f = L.marker(
+                [34.8459, -83.5874],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_9e310121da5aa4c3e0595b168123addf = L.popup({"maxWidth": 400});
+
+        
+            var html_6ec9dcd6568b2f043f9d7433cddf84bd = $(`<div id="html_6ec9dcd6568b2f043f9d7433cddf84bd" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Moccasin Creek State Park </h4>         <h6 style="text-align: center";>3655 GA Hwy 197, Clarkesville, GA 30523</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 53°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 53°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 55°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/04d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 947-3194</p>         <a href="https://www.google.com/search?q=+Moccasin+Creek+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_9e310121da5aa4c3e0595b168123addf.setContent(html_6ec9dcd6568b2f043f9d7433cddf84bd);
+        
+
+        marker_31ce9b00aab5d968c32d4db4dee42e1f.bindPopup(popup_9e310121da5aa4c3e0595b168123addf)
+        ;
+
+        
+    
+    
+            var marker_c0714327f2370f5cdb4e1396eb7a543b = L.marker(
+                [33.6323, -84.1708],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_1bd73fa512a8b169d2758ccd2626d625 = L.popup({"maxWidth": 400});
+
+        
+            var html_47faa955c05d5749d9fd0c2f81e961c6 = $(`<div id="html_47faa955c05d5749d9fd0c2f81e961c6" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Panola Mountain State Park </h4>         <h6 style="text-align: center";>2600 Hwy 155, SW, Stockbridge, GA 30281</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 58°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 389-7805</p>         <a href="https://www.google.com/search?q=+Panola+Mountain+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_1bd73fa512a8b169d2758ccd2626d625.setContent(html_47faa955c05d5749d9fd0c2f81e961c6);
+        
+
+        marker_c0714327f2370f5cdb4e1396eb7a543b.bindPopup(popup_1bd73fa512a8b169d2758ccd2626d625)
+        ;
+
+        
+    
+    
+            var marker_4a0300f7fec382edab9a831c78226b20 = L.marker(
+                [33.9848, -84.7472],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_ec126e8486c1c1c53432914f7b572557 = L.popup({"maxWidth": 400});
+
+        
+            var html_cf394b769bea384e3c68d52de2b69bf4 = $(`<div id="html_cf394b769bea384e3c68d52de2b69bf4" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Picketts Mill State Historical Site </h4>         <h6 style="text-align: center";>4432 Mt. Tabor Church Rd, Dallas , GA 30157</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 443-7850</p>         <a href="https://www.google.com/search?q=+Picketts+Mill+State+Historical+Site+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_ec126e8486c1c1c53432914f7b572557.setContent(html_cf394b769bea384e3c68d52de2b69bf4);
+        
+
+        marker_4a0300f7fec382edab9a831c78226b20.bindPopup(popup_ec126e8486c1c1c53432914f7b572557)
+        ;
+
+        
+    
+    
+            var marker_04ca44b8c2d8aa28fcb8dd8bfcd53d03 = L.marker(
+                [32.0657, -84.9208],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_25e904457f352496afa6d1d1db93f599 = L.popup({"maxWidth": 400});
+
+        
+            var html_6943414bc501f82fde225131d32b105c = $(`<div id="html_6943414bc501f82fde225131d32b105c" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Providence Canyon State Park </h4>         <h6 style="text-align: center";>Route 1, Box 158, Lumpkin, GA 31815</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 59°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 838-6202</p>         <a href="https://www.google.com/search?q=+Providence+Canyon+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_25e904457f352496afa6d1d1db93f599.setContent(html_6943414bc501f82fde225131d32b105c);
+        
+
+        marker_04ca44b8c2d8aa28fcb8dd8bfcd53d03.bindPopup(popup_25e904457f352496afa6d1d1db93f599)
+        ;
+
+        
+    
+    
+            var marker_157a1bbb1f0c195f3301f6fa53cba6ac = L.marker(
+                [34.1476, -84.7074],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_493f426db968ddb51fd2c0c96e19c972 = L.popup({"maxWidth": 400});
+
+        
+            var html_60d3a092d00f43b785627a720436a086 = $(`<div id="html_60d3a092d00f43b785627a720436a086" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Red Top Mountain State Park </h4>         <h6 style="text-align: center";>50 Lodge Rd., SE,   Cartersville, GA 30120</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 58°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 58°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 975-0055</p>         <a href="https://www.google.com/search?q=+Red+Top+Mountain+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_493f426db968ddb51fd2c0c96e19c972.setContent(html_60d3a092d00f43b785627a720436a086);
+        
+
+        marker_157a1bbb1f0c195f3301f6fa53cba6ac.bindPopup(popup_493f426db968ddb51fd2c0c96e19c972)
+        ;
+
+        
+    
+    
+            var marker_fa11b97393188ec672cae790955d6e13 = L.marker(
+                [31.1669, -83.5479],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_b0c0825adfa5f2503b0be911b38bfed3 = L.popup({"maxWidth": 400});
+
+        
+            var html_5e4865b4a81f9ec99bcd23e8a2217ecc = $(`<div id="html_5e4865b4a81f9ec99bcd23e8a2217ecc" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Reed Bingham State Park </h4>         <h6 style="text-align: center";>Route 2, Box 394 B-1, Adel, GA 31620</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 63°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 61°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 896-3551</p>         <a href="https://www.google.com/search?q=+Reed+Bingham+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_b0c0825adfa5f2503b0be911b38bfed3.setContent(html_5e4865b4a81f9ec99bcd23e8a2217ecc);
+        
+
+        marker_fa11b97393188ec672cae790955d6e13.bindPopup(popup_b0c0825adfa5f2503b0be911b38bfed3)
+        ;
+
+        
+    
+    
+            var marker_acbebb01202acda2116abd826767b1f9 = L.marker(
+                [34.1668, -82.7457],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_261a17ecf66668d58905fe954c7e7d5c = L.popup({"maxWidth": 400});
+
+        
+            var html_d8ab14743982cbb8e339d1b076ce7d15 = $(`<div id="html_d8ab14743982cbb8e339d1b076ce7d15" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Richard B Russell State Park </h4>         <h6 style="text-align: center";>2650 Russell State Park Rd., Elberton, GA 30635</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 213-2045</p>         <a href="https://www.google.com/search?q=+Richard+B+Russell+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_261a17ecf66668d58905fe954c7e7d5c.setContent(html_d8ab14743982cbb8e339d1b076ce7d15);
+        
+
+        marker_acbebb01202acda2116abd826767b1f9.bindPopup(popup_261a17ecf66668d58905fe954c7e7d5c)
+        ;
+
+        
+    
+    
+            var marker_6ca9612cbc232c7b66adbe1c671c5d96 = L.marker(
+                [30.8057, -84.8755],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_50c36dcd8f55ad2da652d4edbcfb3799 = L.popup({"maxWidth": 400});
+
+        
+            var html_107b046e56d8449c769066648ca7b249 = $(`<div id="html_107b046e56d8449c769066648ca7b249" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Seminole State Park  </h4>         <h6 style="text-align: center";>7870 State Park Dr., Donalsonville, GA 39845</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 64°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 62°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 74°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(229) 861-3137</p>         <a href="https://www.google.com/search?q=+Seminole+State+Park++" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_50c36dcd8f55ad2da652d4edbcfb3799.setContent(html_107b046e56d8449c769066648ca7b249);
+        
+
+        marker_6ca9612cbc232c7b66adbe1c671c5d96.bindPopup(popup_50c36dcd8f55ad2da652d4edbcfb3799)
+        ;
+
+        
+    
+    
+            var marker_16aa632cb2b3a3823fe798b42dee88f2 = L.marker(
+                [31.9585, -81.0526],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_c1f3d23c62bf96e91bad52732e0eb7dc = L.popup({"maxWidth": 400});
+
+        
+            var html_8b85d76a67849576f876c9543f05e24a = $(`<div id="html_8b85d76a67849576f876c9543f05e24a" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Skidaway Island State Park </h4>         <h6 style="text-align: center";>52 Diamond Causeway, Savannah, GA 31411</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 62°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 63°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(912) 598-2300</p>         <a href="https://www.google.com/search?q=+Skidaway+Island+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_c1f3d23c62bf96e91bad52732e0eb7dc.setContent(html_8b85d76a67849576f876c9543f05e24a);
+        
+
+        marker_16aa632cb2b3a3823fe798b42dee88f2.bindPopup(popup_c1f3d23c62bf96e91bad52732e0eb7dc)
+        ;
+
+        
+    
+    
+            var marker_6f271b182af06715304c22b20d69d3ee = L.marker(
+                [33.7584, -84.636],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_0b329de82a7530cbbe31df16d3e8553e = L.popup({"maxWidth": 400});
+
+        
+            var html_39427478bd7b14f10d5b0028e4255060 = $(`<div id="html_39427478bd7b14f10d5b0028e4255060" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Sweetwater Creek State Park </h4>         <h6 style="text-align: center";>P. O. Box 816, Lithia Springs, GA 30122</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 60°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 59°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 59°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(770) 732-5871</p>         <a href="https://www.google.com/search?q=+Sweetwater+Creek+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_0b329de82a7530cbbe31df16d3e8553e.setContent(html_39427478bd7b14f10d5b0028e4255060);
+        
+
+        marker_6f271b182af06715304c22b20d69d3ee.bindPopup(popup_0b329de82a7530cbbe31df16d3e8553e)
+        ;
+
+        
+    
+    
+            var marker_93ec6561a9b734d3a7e855963e53208e = L.marker(
+                [34.4948, -83.0679],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_42056f66061fc273fc8286ba8c3f8d15 = L.popup({"maxWidth": 400});
+
+        
+            var html_0ba5c45aaa98259f5c0fb7efa847ecdb = $(`<div id="html_0ba5c45aaa98259f5c0fb7efa847ecdb" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Tugaloo State Park </h4>         <h6 style="text-align: center";>1763 Tugaloo State Park Rd., Lavonia, GA 30553</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 56°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 55°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 71°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 356-4362</p>         <a href="https://www.google.com/search?q=+Tugaloo+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_42056f66061fc273fc8286ba8c3f8d15.setContent(html_0ba5c45aaa98259f5c0fb7efa847ecdb);
+        
+
+        marker_93ec6561a9b734d3a7e855963e53208e.bindPopup(popup_42056f66061fc273fc8286ba8c3f8d15)
+        ;
+
+        
+    
+    
+            var marker_b5296abbe0a4dedf98dfbb4dfa876327 = L.marker(
+                [34.7254, -83.7216],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_cabf51e4d682886a5b487d7f7b434aad = L.popup({"maxWidth": 400});
+
+        
+            var html_a00a09743f71f5ed4f8961a4e543c26f = $(`<div id="html_a00a09743f71f5ed4f8961a4e543c26f" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Unicoi State Park  </h4>         <h6 style="text-align: center";>P. O. Box 997, Helen, GA 30545</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 54°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 54°F<img src= "http://openweathermap.org/img/wn/04n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 56°F<img src= "http://openweathermap.org/img/wn/04d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/04d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 878-3982</p>         <a href="https://www.google.com/search?q=+Unicoi+State+Park++" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_cabf51e4d682886a5b487d7f7b434aad.setContent(html_a00a09743f71f5ed4f8961a4e543c26f);
+        
+
+        marker_b5296abbe0a4dedf98dfbb4dfa876327.bindPopup(popup_cabf51e4d682886a5b487d7f7b434aad)
+        ;
+
+        
+    
+    
+            var marker_c5b82d9e346e1b0aa0330309c353a424 = L.marker(
+                [34.2965, -83.1599],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_8537dafb28be4e0136ae31f27ba0b79b = L.popup({"maxWidth": 400});
+
+        
+            var html_008e0c6fb11ffc7c802932fb997dc3ec = $(`<div id="html_008e0c6fb11ffc7c802932fb997dc3ec" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Victoria Bryant State Park </h4>         <h6 style="text-align: center";>1105 Bryant Park Rd., Royston, GA 30662</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 245-6270</p>         <a href="https://www.google.com/search?q=+Victoria+Bryant+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_8537dafb28be4e0136ae31f27ba0b79b.setContent(html_008e0c6fb11ffc7c802932fb997dc3ec);
+        
+
+        marker_c5b82d9e346e1b0aa0330309c353a424.bindPopup(popup_8537dafb28be4e0136ae31f27ba0b79b)
+        ;
+
+        
+    
+    
+            var marker_f58be9c123d34b43773d9eca66cf5dbc = L.marker(
+                [34.732, -83.9171],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_399f1cb0cb827a085861fe6f7863626c = L.popup({"maxWidth": 400});
+
+        
+            var html_c7ab911285316c0e3e1e8a47e44e1690 = $(`<div id="html_c7ab911285316c0e3e1e8a47e44e1690" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Vogel State Park </h4>         <h6 style="text-align: center";>7485 Vogel State Park Road, Blairsville, GA 30512</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 50°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 49°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 51°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 67°F<img src= "http://openweathermap.org/img/wn/04d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 745-2628</p>         <a href="https://www.google.com/search?q=+Vogel+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_399f1cb0cb827a085861fe6f7863626c.setContent(html_c7ab911285316c0e3e1e8a47e44e1690);
+        
+
+        marker_f58be9c123d34b43773d9eca66cf5dbc.bindPopup(popup_399f1cb0cb827a085861fe6f7863626c)
+        ;
+
+        
+    
+    
+            var marker_ad82fba758824ae884891b5666229d1c = L.marker(
+                [34.0279, -83.0729],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_907f1c9e528339e7671d95c8dcd83a21 = L.popup({"maxWidth": 400});
+
+        
+            var html_a27ca9faaa4bb24e5d954dd3b7e01ed3 = $(`<div id="html_a27ca9faaa4bb24e5d954dd3b7e01ed3" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Watson Mill State Park </h4>         <h6 style="text-align: center";>650 Watson Mill Rd., Comer, GA 30629</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 57°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 56°F<img src= "http://openweathermap.org/img/wn/03n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 57°F<img src= "http://openweathermap.org/img/wn/02d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 73°F<img src= "http://openweathermap.org/img/wn/01d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 783-5349</p>         <a href="https://www.google.com/search?q=+Watson+Mill+State+Park+" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_907f1c9e528339e7671d95c8dcd83a21.setContent(html_a27ca9faaa4bb24e5d954dd3b7e01ed3);
+        
+
+        marker_ad82fba758824ae884891b5666229d1c.bindPopup(popup_907f1c9e528339e7671d95c8dcd83a21)
+        ;
+
+        
+    
+    
+            var marker_3ec33b39f37f93a337ce7d78528fbb3a = L.marker(
+                [34.73698, -83.39293],
+                {}
+            ).addTo(map_25104a2556d1d604b047a5cdd9ba743f);
+        
+    
+        var popup_3b90ad9ac2e9a243812fdd06c8c8287e = L.popup({"maxWidth": 400});
+
+        
+            var html_0df8fe56eece82df15325556cd5d4b27 = $(`<div id="html_0df8fe56eece82df15325556cd5d4b27" style="width: 100.0%; height: 100.0%;">         <h4 style="text-align: center";> Tallulah Gorge State Park  </h4>         <h6 style="text-align: center";>338 Jane Hurt Yarn Dr,  Tallulah Falls , GA 30573</h6>         <hr style="margin:1px">         <p style=text-align:center;>06h: 55°F<img src= "http://openweathermap.org/img/wn/01n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>09h: 54°F<img src= "http://openweathermap.org/img/wn/02n@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>12h: 56°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style=text-align:center;>15h: 72°F<img src= "http://openweathermap.org/img/wn/03d@2x.png" width = 35></p>         <hr style="margin:1px">         <p style="text-align: center; font-weight: bold;">Need more info?</p>         <p style="text-align: center; color: #6495ED">(706) 754-7970</p>         <a href="https://www.google.com/search?q=+Tallulah+Gorge+State+Park++" target="_blank"><p style="text-align: center;">Check it out!</p></a>         </div>`)[0];
+            popup_3b90ad9ac2e9a243812fdd06c8c8287e.setContent(html_0df8fe56eece82df15325556cd5d4b27);
+        
+
+        marker_3ec33b39f37f93a337ce7d78528fbb3a.bindPopup(popup_3b90ad9ac2e9a243812fdd06c8c8287e)
+        ;
+
+        
+    
+</script>
