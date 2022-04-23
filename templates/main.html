@@ -6,22 +6,25 @@
 {% if "user" in session %}
     <p>Georgia CampingInfo</p>
     
-    <form action="info" method="post">
-      <input type="submit" value="Map">
-    </form>
+    <form action="info" method="post"> 
+    <input type="submit"class = "btn btn-danger" value="Map"> <a>Click to see whole Map!!</a>
+    </form> 
     <div class = "park">
-      <ul>
 
         <form action="parking" method="post">
-          <input type="submit" value="refresh">
+          <input type="submit" class = "btn btn-primary" value="refresh"> <a>Click to see Info!</a>
         </form>
-      </ul>
+
+    </div>
+    <div class="text-center">
+      <img src={{imgs}} class="img-fluid" alt="..." style ="width: 35vw; min-width:180px;">
     </div>
     <div class = "information">
-      <ul>{{name}}</ul>
-      <ul>{{hours}}</ul>
-      <ul>{{coord}}</ul>
-      <ul>{{state}}</ul>
+      <ul>States :   {{state}}</ul>
+      <ul>Name of the park:    {{name}}</ul>
+      <ul>Description :   {{desc}}</ul>
+      <ul>Location Coordinates :   {{coord}}</ul>
+      <ul>Open hours :  {{hours}}</ul>
     </div>
     <a href = "{{directions}}">Click here to see {{state}} national park website!</a>
 

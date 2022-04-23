@@ -77,11 +77,15 @@ def home():
 @app.route("/parking", methods = ['POST'])
 def parking():
     state_ids = ["GA","FL","TN"]
+    img = ["https://media.istockphoto.com/photos/tourists-sitting-near-campfire-under-starry-sky-picture-id1213691432?k=20&m=1213691432&s=612x612&w=0&h=nKhvQ4QWfeKAFskB87yq0L9w2q8ezimm5Qqp-p4Spj4=",
+    "https://media.istockphoto.com/photos/tourist-camp-with-fire-tent-and-firewood-picture-id941906052?k=20&m=941906052&s=612x612&w=0&h=gaVQltupvbPKmI6ftF97mY_ieDyF2v5DGfbgE9KX8GU=",
+    "https://wallpaperaccess.com/full/112906.jpg"]
     state_id = random.choice(state_ids)
+    imgs = random.choice(img)
     name, link, state, desc, directions, hours ,coord = get_park_data(state_id)
 
     return render_template("main.html", name = name, link = link,state = state , desc = desc, directions = directions,
-    hours = hours, coord = coord)
+    hours = hours, coord = coord, imgs = imgs)
 
 @app.route('/login', methods = ['GET','POST'])
 def login():
@@ -202,7 +206,8 @@ def main():
     #if "user" in session:
         #user = session["user"]
         #currentUsers = getAllUsers()
-    return render_template("main.html")
+    imgs = "https://media.istockphoto.com/photos/tourists-sitting-near-campfire-under-starry-sky-picture-id1213691432?k=20&m=1213691432&s=612x612&w=0&h=nKhvQ4QWfeKAFskB87yq0L9w2q8ezimm5Qqp-p4Spj4="
+    return render_template("main.html", imgs=imgs)
     
 @app.route("/logout", methods=["GET","POST"])
 def logout():
